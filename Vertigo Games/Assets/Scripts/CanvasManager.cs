@@ -30,7 +30,7 @@ public class CanvasManager : MonoBehaviour
         widthText.text = ($"Width ({sliderValue})");
         HexagonManager.Instance.width = (int) sliderValue;
 
-        float mainCameraZ = Mathf.Clamp(sliderValue * 5, 35, 52);
+        float mainCameraZ = Mathf.Clamp(sliderValue * 5, 38, 52);
         Camera.main.transform.position = Vector3.forward * -mainCameraZ;
     }
     public void HeightSliderChange()
