@@ -245,12 +245,16 @@ public class HexagonManager : Data
     }
     private Vector2 FirstHexPotPosition()
     {
-        var xMultiply = width - 1 / 2;
-        var clampDifferent = 9 - width;
         var clampHeight = height;
-        if (height % 2 != 0) { clampHeight += 1; } 
+
+        if (height % 2 != 0)
+        {
+            clampHeight += 1;
+        }
+        
         clampHeight = clampHeight / 2;
-        return new Vector2(Mathf.Clamp(xMultiply * -2, -8f + clampDifferent, 8), -10f + -clampHeight);
+        
+        return new Vector2(width - 1, 10f + clampHeight) * -1;
     }
     private IEnumerator LevelStartHexagonsInitializeCo(bool startInitialize)
     {

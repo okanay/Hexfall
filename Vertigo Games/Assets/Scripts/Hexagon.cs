@@ -1,8 +1,9 @@
+using System;
 using TMPro;
 using UnityEngine;
 
 
-public class Hexagon : MonoBehaviour
+public class Hexagon : Data
 {
     [SerializeField] 
     private SpriteRenderer[] spriteModels;
@@ -27,7 +28,9 @@ public class Hexagon : MonoBehaviour
             
             LerpStateCheck();
         }
+        
     }
+
     public void LerpStateCheck()
     {
         if (HexagonManager.Instance.GameOver) return;
